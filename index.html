@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flores Mejoradas con Título</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f8ff;
+            text-align: center; /* Centra el texto */
+        }
+
+        h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 4rem;
+            color: #FF69B4;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            margin-bottom: 20px;
+            animation: fadeIn 3s ease-in-out; /* Animación para que aparezca suavemente */
+        }
+
+        /* Estilo para el mensaje */
+        .mensaje {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.5rem;
+            color: #333; /* Color del texto */
+            margin: 20px;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.8); /* Fondo semi-transparente */
+            border-radius: 10px; /* Esquinas redondeadas */
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Sombra para resaltar el mensaje */
+            animation: fadeIn 3s ease-in-out; /* Animación para que aparezca suavemente */
+        }
+
+        /* Animación de fade-in */
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        .ramo {
+            display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            position: relative;
+        }
+
+        .flor {
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 15px;
+        }
+
+        .petalo {
+            position: absolute;
+            width: 50px;
+            height: 100px;
+            background-color: #FFD700;
+            border-radius: 50% 50% 50% 50%;
+            transform-origin: bottom center;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            z-index: 2; /* Pétalos por delante */
+        }
+
+        .petalo:nth-child(1) { transform: rotate(0deg) translateY(-20px); }
+        .petalo:nth-child(2) { transform: rotate(45deg) translateY(-20px); }
+        .petalo:nth-child(3) { transform: rotate(90deg) translateY(-20px); }
+        .petalo:nth-child(4) { transform: rotate(135deg) translateY(-20px); }
+        .petalo:nth-child(5) { transform: rotate(180deg) translateY(-20px); }
+        .petalo:nth-child(6) { transform: rotate(225deg) translateY(-20px); }
+        .petalo:nth-child(7) { transform: rotate(270deg) translateY(-20px); }
+        .petalo:nth-child(8) { transform: rotate(315deg) translateY(-20px); }
+
+        /* Centro de la flor */
+        .centro {
+            position: absolute;
+            top: 85%;
+            left: 20%;
+            width: 50px;
+            height: 50px;
+            background-color: #FFA500;
+            border-radius: 50%;
+            transform: translate(-50%, -50%);
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            z-index: 3; /* Centro de la flor también por delante */
+        }
+
+        /* Tallo de la flor */
+        .tallo {
+            position: absolute;
+            top: 100px;
+            left: 0%;
+            width: 8px;
+            height: 200px;
+            background-color: #228B22;
+            transform: translateX(-50%);
+            z-index: 1; /* Tallo detrás de la flor */
+        }
+
+        /* Inclinación de los tallos */
+        .flor:nth-child(1) .tallo {
+            transform: translateX(-50%) rotate(-25deg);
+        }
+
+        .flor:nth-child(2) .tallo {
+            transform: translateX(-50%) rotate(10deg);
+        }
+
+        .flor:nth-child(3) .tallo {
+            transform: translateX(-50%) rotate(25deg);
+        }
+
+        /* Animación de balanceo */
+        @keyframes balanceo {
+            0% { transform: rotate(0deg); }
+            50% { transform: rotate(5deg); }
+            100% { transform: rotate(0deg); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título bonito -->
+    <h1>Te amo 💖</h1>
+    
+    <!-- Mensaje bonito -->
+    <div class="mensaje">
+        Mi amor, quiero que sepas que eres la mejor del mundo. Aunque hoy no tengamos dinero para unas flores reales, no significa que deje de pensar en lo que realmente te mereces. Tú te mereces esta vida y la otra por estar siempre a mi lado, apoyándome y haciéndome sentir el hombre más afortunado. Te amo, y siempre encontraré la forma de recordarte lo especial que eres, sin importar las circunstancias. Gracias por todo lo que eres y por todo lo que haces. ❤️
+    </div>
+
+    <br>
+    <br>
+
+    <div class="ramo">
+        <div class="flor">
+            <div class="tallo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="centro"></div>
+        </div>
+
+        <div class="flor">
+            <div class="tallo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="centro"></div>
+        </div>
+
+        <div class="flor">
+            <div class="tallo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="petalo"></div>
+            <div class="centro"></div>
+        </div>
+        
+    </div>
+
+</body>
+</html>
